@@ -1,0 +1,63 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: lightcoral;
+}
+.container{
+    border: 1px solid black;
+    width: 30%;
+    height: 550px;
+    margin-top: 100px;
+    border-radius: 20px;
+    background-color: whitesmoke;
+}
+.khung{
+    padding: 20px 0px;
+    text-transform: uppercase;
+    color: white;
+    background-color: black;
+    border-radius: 20px 20px 0px 0px;
+}
+.ctduoi{
+    background-color: whitesmoke;
+}
+.ctduoi input{
+    padding: 10px 5px;
+    margin: 10px 0px;
+    border-radius: 10px;
+}
+.ctduoi::after{
+    content: "vnd";
+    position: absolute;
+    right: 655px;
+    top: 235px;
+    color: red;
+}
+.ctduoi::before{
+    content: "people";
+    position: absolute;
+    right: 650px;
+    top: 390px;
+    color: red;
+}
+#vc{
+    padding: 10px 60px 10px 10px;
+    margin: 10px 0px;
+    border-radius: 10px;
+}
+#btn{
+    border-radius: 10px;
+    padding: 10px 30px;
+    margin: 20px 0px 40px 0px;
+    background-color: red;
+    color: white;
+    font-size: 1.2em;
+}
+#result{
+    color: red;
+    font-size: 1.3em;
+    padding-bottom: 20px;
+}

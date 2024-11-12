@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Tạo form share tiền bill</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='BT3.css'>
+    <script src='BT3.js'></script>
+</head>
+<body>
+<center>
+    <div class="container">
+        <div class="khung">
+            <h1>share bill</h1>
+        </div>
+        <div class="ctduoi">
+            <form action="" method="">
+                <br>
+                <label for="tongbill">Tổng bill của bạn:</label><br>
+                <input type="number" id="tongbill" name="tongbill" value="" placeholder="Bill Amount"><br>
+                <label for="vc">Vui lòng chọn mã giảm giá:</label><br>
+                <select id="vc">
+                    <option>voucher:0%</option>
+                    <option>voucher:5%</option>
+                    <option>voucher:10%</option>
+                    <option>voucher:15%</option>
+                    <option>voucher:20%</option>
+                    <option>voucher:25%</option>
+                    <option>voucher:30%</option>
+                    <option>voucher:35%</option>
+                    <option>voucher:40%</option>
+                    <option>voucher:45%</option>
+                    <option>voucher:50%</option>
+                    <option>voucher:55%</option>
+                    <option>voucher:60%</option>
+                    <option>voucher:65%</option>
+                    <option>voucher:70%</option>
+                    <option>voucher:75%</option>
+                    <option>voucher:80%</option>
+                    <option>voucher:85%</option>
+                    <option>voucher:90%</option>
+                    <option>voucher:95%</option>
+                    <option>voucher:100%</option>
+                </select><br>
+                <label for="share">Số người share bill:</label><br>
+                <input type="number" id="share" name="share" value="" placeholder="Number Of People"><br>
+                <button id="btn">CACULATE!</button>
+            </form>
+            <div id="result"></div>
+        </div>
+        <script language="javascript">
+            document.getElementById("btn").addEventListener("click", function() {
+                event.preventDefault();
+                var tongbill = parseFloat(document.getElementById("tongbill").value);
+                var voucher = parseFloat(document.getElementById("vc").value.split(":")[1]);
+                var songuoi = parseInt(document.getElementById("share").value);
+                var result = (tongbill - (tongbill * voucher / 100)) / songuoi;
+                document.getElementById("result").textContent = "Số tiền của mỗi người là: " + result + " vnd";
+            });
+        </script>
+    </div>
+</center>
+</body>
+</html>

@@ -1,0 +1,113 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: black;
+}
+.container{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .circle{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    border-top: 5px solid #3333ff;
+    animation: animate 4s linear infinite;
+}
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.container .circle::before{
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 15px;
+    top: 12px;
+    right: 12px;
+    border-radius: 50%;
+    background-color: #3333ff;
+    box-shadow: 0px 0px 0px 5px #3333ff33,
+    0px 0px 0px 20px #3333ff22,
+    0px 0px 0px 10px #3333ff11,
+    0px 0px 20px #3333ff,
+    0px 0px 50px #3333ff;
+}
+.container .circle:nth-child(2){
+    animation: animate2 4s linear infinite;
+    animation-delay: -1s;
+    border-top: 5px solid transparent;
+    border-left: 5px solid #00ff00;
+}
+@keyframes animate2{
+    0%{
+        transform: rotate(360deg);
+
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+.container .circle:nth-child(2)::before{
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 15px;
+    top: initial;
+    bottom: 12px;
+    left: 12px;
+    border-radius: 50%;
+    background-color: #00ff00;
+    box-shadow: 0px 0px 0px 5px #00ff0033,
+    0px 0px 0px 20px #00ff0022,
+    0px 0px 0px 10px #00ff0011,
+    0px 0px 20px #00ff00,
+    0px 0px 50px #00ff00;
+}
+.container .circle:nth-child(3){
+    animation: animate2 4s linear infinite;
+    animation-delay: -3s;
+    position: absolute;
+    top: -65px;
+    border-top: 5px solid transparent;
+    border-left: 5px solid #ff4242;
+}
+.container .circle:nth-child(3)::before{
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 15px;
+    top: initial;
+    bottom: 12px;
+    left: 12px;
+    border-radius: 50%;
+    background-color: #ff4242;
+    box-shadow: 0px 0px 0px 5px #ff424233,
+    0px 0px 0px 20px #ff424222,
+    0px 0px 0px 10px #ff424211,
+    0px 0px 20px #ff4242,
+    0px 0px 50px #ff4242;
+}
+.container p{
+    position: absolute;
+    top: 180px;
+    color: #fff;
+    font-size: 2em;
+}
